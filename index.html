@@ -60,6 +60,18 @@
             }
         }
 
+        /* Logo Link Wrapping */
+        .logo-link {
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 50%;
+            transition: transform 0.2s ease;
+        }
+
+        .logo-link:active {
+            transform: scale(0.95);
+        }
+
         /* Ultra Luxury Logo Circle */
         .logo-container {
             width: 125px;
@@ -73,6 +85,7 @@
             background: radial-gradient(circle, rgba(0, 230, 153, 0.08) 0%, rgba(5, 12, 10, 0.95) 75%);
             animation: fadeInUp 0.8s ease-out forwards, pulseGlow 4s infinite ease-in-out 0.8s;
             position: relative;
+            cursor: pointer;
         }
 
         .logo-inner {
@@ -257,7 +270,7 @@
             fill: #ffffff;
         }
 
-        /* --- Footer Links Style --- */
+        /* Footer Links Style */
         .footer-links {
             display: flex;
             flex-wrap: wrap;
@@ -286,7 +299,7 @@
             color: #333d4d;
         }
 
-        /* --- Popup Modal Styling --- */
+        /* Popup Modal Styling */
         .modal-overlay {
             position: fixed;
             top: 0;
@@ -378,15 +391,17 @@
 <body>
 
     <div class="container">
-        <!-- Logo -->
-        <div class="logo-container">
-            <div class="logo-inner">
-                <div class="logo-text">Crypto<br>Bazaar</div>
-                <svg class="logo-chart" viewBox="0 0 50 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 13L11 8.5L20 12.5L34 2.5L49 6.5" stroke="#00e699" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+        <!-- Linked Logo -->
+        <a href="CB.jpeg" target="_blank" class="logo-link">
+            <div class="logo-container">
+                <div class="logo-inner">
+                    <div class="logo-text">Crypto<br>Bazaar</div>
+                    <svg class="logo-chart" viewBox="0 0 50 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 13L11 8.5L20 12.5L34 2.5L49 6.5" stroke="#00e699" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
             </div>
-        </div>
+        </a>
 
         <!-- Heading -->
         <h1>Join the Crypto Bazaar<br>Community</h1>
@@ -470,7 +485,7 @@
             },
             contact: {
                 title: "Contact Us",
-                body: `<p>Have questions or need assistance? Our support team is here to help.</p><p><strong>Telegram:</strong> <a href="https://t.me/+jmhZ2utD-15jZjI9" target="_blank" style="color: #00e699;">@CryptoBazaarSupport</a></p><p><strong>Response Time:</strong> Within 24 hours.</p>`
+                body: `<p>Have questions or need assistance? Our support team is here to help.</p><p><strong>Telegram:</strong> <a href="https://www.instagram.com/fxtraderraj" target="_blank" style="color: #00e699;">https://www.instagram.com/fxtraderraj</a></p><p><strong>Response Time:</strong> Within 24 hours.</p>`
             },
             about: {
                 title: "About Crypto Bazaar",
