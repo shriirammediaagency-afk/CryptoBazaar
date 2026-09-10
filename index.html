@@ -1,106 +1,502 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Basic -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Free Market Education – Start Today</title>
-  <meta name="description" content="100% free stock market education. Learn chart reading, technical analysis, and risk management. No buy/sell tips. For learning purpose only.">
-  <link rel="canonical" href="https://example.com/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Bazaar Community</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
 
-  <!-- Performance -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet">
+        body {
+            background-color: #030303;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px 20px 40px 20px;
+            background-image: radial-gradient(circle at 50% 20%, rgba(0, 230, 153, 0.05) 0%, rgba(3, 3, 3, 1) 70%);
+            overflow-x: hidden;
+            position: relative;
+        }
 
-  <!-- Favicons (optional) -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+        .container {
+            width: 100%;
+            max-width: 380px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Free Market Education – Start Today">
-  <meta property="og:description" content="Learn charts & risk management. No buy/sell tips. 100% educational.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://example.com/">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1516251193007-45ef944ab0c6?q=80&w=1600&auto=format&fit=crop">
+        /* --- Page Entrance Animations --- */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-  <!-- Minimal CSS (inline for speed) -->
-  <style>
-    :root{
-      --bg1:#0c0c1d;
-      --bg2:#1a1a2b;
-      --brand: #ffcc00;
-      --brand-2:#00f0ff;
-      --text:#ffffff;
-      --muted:#b5b5c3;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0}
-    body{
-      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color:var(--text);
-      background:
-        linear-gradient(135deg, rgba(0,0,0,.45), rgba(0,0,0,.45)),
-        url('https://images.unsplash.com/photo-1516251193007-45ef944ab0c6?q=80&w=1600&auto=format&fit=crop') no-repeat center/cover fixed;
-      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
-      min-height:100vh;
-    }
-    .container{
-      max-width:520px; margin:0 auto; padding:24px 18px; text-align:center; min-height:100vh; display:flex; flex-direction:column; justify-content:center;
-      backdrop-filter: saturate(130%);
-    }
-    .badge{display:inline-block; font-size:.78rem; padding:6px 10px; border:1px solid #2a2a3a; border-radius:999px; color:#d6eaff; background:rgba(0,240,255,.08); margin-bottom:14px}
-    h1{font-size:1.9rem; line-height:1.2; margin:6px 0 10px; background:linear-gradient(90deg,var(--brand-2),var(--brand)); -webkit-background-clip:text; background-clip:text; color:transparent;}
-    .sub{font-size:1rem; color:var(--muted); margin:0 auto 16px; max-width:36ch}
-    .pill{
-      display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:999px; background:rgba(0,255,153,.07); border:1px dashed rgba(0,255,153,.35); color:#d8ffe9; font-size:.9rem; margin:6px 0 18px;
-    }
-    ul.bullets{list-style:none; padding:0; margin:0 0 18px}
-    ul.bullets li{margin:8px 0; color:#e9eef9}
-    .cta{
-      display:inline-block; text-decoration:none; background:var(--brand); color:#041b14; padding:14px 18px; font-weight:700; border-radius:12px; box-shadow:0 0 0 0 rgba(0,255,153,.6); transform:translateZ(0);
-      transition:transform .15s ease;
-      animation:pulse 1.6s infinite;
-    }
-    .cta:active{transform:scale(.98)}
-    @keyframes pulse{
-      0%{box-shadow:0 0 0 0 rgba(0,255,153,.55)}
-      70%{box-shadow:0 0 0 20px rgba(0,255,153,0)}
-      100%{box-shadow:0 0 0 0 rgba(0,255,153,0)}
-    }
-    .fineprint{font-size:.86rem; color:var(--muted); margin:18px auto 0; max-width:44ch}
-    .disclaimer{font-size:.78rem; color:#9aa4b2; margin:18px auto 0; max-width:50ch}
-    .safe{display:flex; align-items:center; justify-content:center; gap:8px; margin-top:14px; color:#a1ffd6; font-size:.9rem}
-    .shield{width:18px; height:18px; display:inline-block; border-radius:4px; background:linear-gradient(135deg,#0df,#0f9)}
-    footer{opacity:.8; margin-top:22px; font-size:.78rem; color:#9aa4b2}
-  </style>
+        @keyframes pulseGlow {
+            0%, 100% {
+                box-shadow: 0 0 25px rgba(0, 230, 153, 0.15), inset 0 0 15px rgba(0, 230, 153, 0.05);
+            }
+            50% {
+                box-shadow: 0 0 35px rgba(0, 230, 153, 0.35), inset 0 0 20px rgba(0, 230, 153, 0.15);
+            }
+        }
+
+        /* Ultra Luxury Logo Circle */
+        .logo-container {
+            width: 125px;
+            height: 125px;
+            border-radius: 50%;
+            border: 1px solid rgba(0, 230, 153, 0.4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 24px;
+            background: radial-gradient(circle, rgba(0, 230, 153, 0.08) 0%, rgba(5, 12, 10, 0.95) 75%);
+            animation: fadeInUp 0.8s ease-out forwards, pulseGlow 4s infinite ease-in-out 0.8s;
+            position: relative;
+        }
+
+        .logo-inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-text {
+            font-weight: 800;
+            font-size: 20px;
+            letter-spacing: 1px;
+            color: #ffffff;
+            line-height: 1.1;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            text-align: center;
+        }
+
+        .logo-chart {
+            margin-top: 5px;
+            width: 58px;
+            height: 18px;
+            filter: drop-shadow(0px 2px 4px rgba(0, 230, 153, 0.5));
+        }
+
+        /* Heading */
+        h1 {
+            font-size: 34px;
+            font-weight: 800;
+            line-height: 1.15;
+            letter-spacing: -0.5px;
+            margin-bottom: 22px;
+            color: #ffffff;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+            animation: fadeInUp 0.8s ease-out 0.2s forwards;
+            opacity: 0;
+        }
+
+        /* Content Body */
+        .description {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #b0b5bd;
+            font-weight: 400;
+            margin-bottom: 34px;
+            padding: 0 2px;
+            animation: fadeInUp 0.8s ease-out 0.35s forwards;
+            opacity: 0;
+        }
+
+        .description strong {
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        /* Buttons Container */
+        .btn-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            margin-bottom: 35px;
+            animation: fadeInUp 0.8s ease-out 0.5s forwards;
+            opacity: 0;
+        }
+
+        /* --- Left-to-Right Lighting Sweep Animation --- */
+        @keyframes lightSweep {
+            0% { left: -120%; }
+            20% { left: 120%; }
+            100% { left: 120%; }
+        }
+
+        .btn {
+            width: 100%;
+            padding: 17px 22px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            box-sizing: border-box;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -120%;
+            width: 70%;
+            height: 100%;
+            background: linear-gradient(
+                90deg, 
+                rgba(255, 255, 255, 0) 0%, 
+                rgba(255, 255, 255, 0.45) 50%, 
+                rgba(255, 255, 255, 0) 100%
+            );
+            transform: skewX(-25deg);
+            animation: lightSweep 3.5s infinite cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 2;
+        }
+
+        .btn-orange::after { animation-delay: 0.5s; }
+        .btn-blue::after { animation-delay: 1.8s; }
+
+        .btn:active { transform: scale(0.97); }
+
+        /* Orange Luxury Button */
+        .btn-orange {
+            background: linear-gradient(180deg, #f78d1e 0%, #d45b00 50%, #9e3900 100%);
+            color: #ffffff;
+            box-shadow: 
+                0 8px 25px rgba(212, 91, 0, 0.4),
+                inset 0 1px 1px rgba(255, 255, 255, 0.4),
+                inset 0 -2px 4px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 170, 90, 0.3);
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        }
+
+        /* Dark Teal/Blue Luxury Button */
+        .btn-blue {
+            background: linear-gradient(180deg, #1d6075 0%, #0d3c4d 50%, #05232d 100%);
+            color: #ffffff;
+            box-shadow: 
+                0 8px 25px rgba(13, 60, 77, 0.5),
+                inset 0 1px 1px rgba(255, 255, 255, 0.3),
+                inset 0 -2px 4px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(75, 160, 185, 0.3);
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .btn-icon {
+            width: 20px;
+            height: 20px;
+            fill: #ffffff;
+            flex-shrink: 0;
+            filter: drop-shadow(0 1px 2px rgba(0,0,0,0.2));
+            z-index: 3;
+        }
+
+        .btn span { z-index: 3; }
+
+        /* Trustpilot Footer */
+        .trustpilot-footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            font-size: 15px;
+            color: #ffffff;
+            letter-spacing: 0.2px;
+            animation: fadeInUp 0.8s ease-out 0.65s forwards;
+            opacity: 0;
+            margin-bottom: 30px;
+        }
+
+        .trustpilot-footer .bold { font-weight: 700; }
+        .trustpilot-footer .rating { color: #cbd5e1; font-weight: 400; }
+
+        .star-box {
+            width: 20px;
+            height: 20px;
+            background-color: #00b67a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 2px;
+            margin: 0 1px;
+        }
+
+        .star-box svg {
+            width: 14px;
+            height: 14px;
+            fill: #ffffff;
+        }
+
+        /* --- Footer Links Style --- */
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            row-gap: 8px;
+            font-size: 12px;
+            color: #808a9d;
+            animation: fadeInUp 0.8s ease-out 0.8s forwards;
+            opacity: 0;
+            padding: 0 10px;
+        }
+
+        .footer-links a {
+            color: #808a9d;
+            text-decoration: none;
+            transition: color 0.2s;
+            cursor: pointer;
+        }
+
+        .footer-links a:hover {
+            color: #00e699;
+        }
+
+        .footer-links span {
+            color: #333d4d;
+        }
+
+        /* --- Popup Modal Styling --- */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(8px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+            padding: 20px;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .modal-card {
+            background: #0f141c;
+            border: 1px solid rgba(0, 230, 153, 0.3);
+            border-radius: 20px;
+            padding: 24px;
+            max-width: 400px;
+            width: 100%;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 230, 153, 0.1);
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+            text-align: left;
+        }
+
+        .modal-overlay.active .modal-card {
+            transform: scale(1);
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 12px;
+        }
+
+        .modal-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .modal-close {
+            background: transparent;
+            border: none;
+            color: #808a9d;
+            font-size: 24px;
+            cursor: pointer;
+            line-height: 1;
+            padding: 0 4px;
+            transition: color 0.2s;
+        }
+
+        .modal-close:hover {
+            color: #ffffff;
+        }
+
+        .modal-body {
+            font-size: 13px;
+            line-height: 1.6;
+            color: #a0aec0;
+        }
+
+        .modal-body p {
+            margin-bottom: 12px;
+        }
+
+        .modal-body strong {
+            color: #ffffff;
+        }
+    </style>
 </head>
 <body>
-  <main class="container">
-    <span class="badge">100% Educational • Policy Safe</span>
-    <h1>Free Market Education – Start Today</h1>
-    <p class="sub">Understand charts & risk before trading</p>
 
-    <div class="pill">🚫 No Buy/Sell Tips • ✅ For Learning Purpose Only</div>
+    <div class="container">
+        <!-- Logo -->
+        <div class="logo-container">
+            <div class="logo-inner">
+                <div class="logo-text">Crypto<br>Bazaar</div>
+                <svg class="logo-chart" viewBox="0 0 50 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 13L11 8.5L20 12.5L34 2.5L49 6.5" stroke="#00e699" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </div>
 
-    <ul class="bullets" aria-label="What you'll learn">
-      <li>• Chart basics & risk rules (no return promises)</li>
-      <li>• How to read trends without speculation</li>
-      <li>• Market discipline & common mistakes</li>
-    </ul>
+        <!-- Heading -->
+        <h1>Join the Crypto Bazaar<br>Community</h1>
 
-    <!-- CTA goes to a page-specific bridge -->
-    <a class="cta" href="bridge-lp80.html" rel="nofollow">Start Learning</a>
+        <!-- Content Body -->
+        <p class="description">
+            Get access to <strong>free Gold signals</strong>, <strong>direct support</strong> from me, and a community focused on <strong>making money</strong>. Join thousands of members and start your journey with Crypto Bazaar today, <strong>completely free</strong>.
+        </p>
 
-    <div class="safe"><span class="shield" aria-hidden="true"></span> Ad Policy Friendly Content</div>
+        <!-- Action Buttons with Light Sweep -->
+        <div class="btn-container">
+            <!-- Orange Telegram Button -->
+            <a href="https://t.me/+jmhZ2utD-15jZjI9" class="btn btn-orange" target="_blank">
+                <svg class="btn-icon" viewBox="0 0 24 24">
+                    <path d="M9.78 18.65l.28-4.2 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-2.03 1.96c-.23.23-.42.42-.85.42z"/>
+                </svg>
+                <span>Join my FREE group NOW</span>
+            </a>
 
-    <p class="fineprint">We focus on concepts & frameworks suitable for beginners.</p>
-    <p class="disclaimer"><em>This website is for educational purposes only. We do not provide investment, trading, or financial advice.</em></p>
+            <!-- Blue Private Message Button -->
+            <a href="https://t.me/+jmhZ2utD-15jZjI9" class="btn btn-blue" target="_blank">
+                <svg class="btn-icon" viewBox="0 0 24 24">
+                    <path d="M9.78 18.65l.28-4.2 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-2.03 1.96c-.23.23-.42.42-.85.42z"/>
+                </svg>
+                <span>Send me a private message! ;)</span>
+            </a>
+        </div>
 
-    <footer>© <span id="y"></span> Market Basics Learning Hub</footer>
-  </main>
+        <!-- Trustpilot Rating -->
+        <div class="trustpilot-footer">
+            <span class="bold">Great</span>
+            <span class="rating">4.2 out of 5</span>
+            <div class="star-box">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                </svg>
+            </div>
+            <span class="bold">Trustpilot</span>
+        </div>
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+        <!-- Footer Links -->
+        <div class="footer-links">
+            <a onclick="openModal('disclaimer')">Disclaimer</a>
+            <span>•</span>
+            <a onclick="openModal('terms')">Terms</a>
+            <span>•</span>
+            <a onclick="openModal('privacy')">Privacy</a>
+            <span>•</span>
+            <a onclick="openModal('contact')">Contact Us</a>
+            <span>•</span>
+            <a onclick="openModal('about')">About</a>
+        </div>
+    </div>
+
+    <!-- Popup Modal Structure -->
+    <div class="modal-overlay" id="modalOverlay" onclick="closeModalOutside(event)">
+        <div class="modal-card">
+            <div class="modal-header">
+                <div class="modal-title" id="modalTitle">Modal Title</div>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Dynamic Content Load -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const modalData = {
+            disclaimer: {
+                title: "Disclaimer",
+                body: `<p>Trading financial instruments and cryptocurrencies involves significant risk and can result in the loss of your capital. Information provided by Crypto Bazaar is for educational and informational purposes only and does not constitute financial advice.</p><p>Always perform your own due diligence before making any investment decisions.</p>`
+            },
+            terms: {
+                title: "Terms of Service",
+                body: `<p>By accessing Crypto Bazaar's platform and community, you agree to comply with our terms. All market analysis, signals, and content are owned by Crypto Bazaar and may not be redistributed without permission.</p><p>We reserve the right to restrict access to users who violate community guidelines.</p>`
+            },
+            privacy: {
+                title: "Privacy Policy",
+                body: `<p>Crypto Bazaar respects your privacy. We do not sell or trade your personal information to third parties.</p><p>Any data collected through interactions is strictly used to improve community support, services, and communication.</p>`
+            },
+            contact: {
+                title: "Contact Us",
+                body: `<p>Have questions or need assistance? Our support team is here to help.</p><p><strong>Telegram:</strong> <a href="https://t.me/+jmhZ2utD-15jZjI9" target="_blank" style="color: #00e699;">@CryptoBazaarSupport</a></p><p><strong>Response Time:</strong> Within 24 hours.</p>`
+            },
+            about: {
+                title: "About Crypto Bazaar",
+                body: `<p>Crypto Bazaar is a premier trading community providing daily market analysis, gold & crypto signals, and educational resources.</p><p>Our mission is to help thousands of members navigate the financial markets with clarity, confidence, and discipline.</p>`
+            }
+        };
+
+        function openModal(key) {
+            const data = modalData[key];
+            if (data) {
+                document.getElementById('modalTitle').innerText = data.title;
+                document.getElementById('modalBody').innerHTML = data.body;
+                document.getElementById('modalOverlay').classList.add('active');
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('modalOverlay').classList.remove('active');
+        }
+
+        function closeModalOutside(e) {
+            if (e.target.id === 'modalOverlay') {
+                closeModal();
+            }
+        }
+    </script>
+
 </body>
 </html>
